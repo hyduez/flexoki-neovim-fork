@@ -1,4 +1,4 @@
-local palette = require('flexoki.palette')
+local palette = require("flexoki.palette")
 
 local M = {}
 
@@ -7,11 +7,11 @@ M.groups = function()
 
 	--- @type table<string, vim.api.keyset.highlight>
 	return {
-		["WhichKey"]          = { fg = c.purple,     bg = 'NONE' },
-		["WhichKeySeparator"] = { fg = c.green,      bg = 'NONE' },
-		["WhichKeyGroup"]     = { fg = c.blue,       bg = 'NONE' },
-		["WhichKeyDesc"]      = { fg = c.light_blue, bg = 'NONE' },
-		["WhichKeyFloat"]     = { fg = 'NONE',       bg = c.dark },
+		["WhichKey"] = { bg = "none" },
+		["WhichKeySeparator"] = { fg = c.green, bg = "none" },
+		["WhichKeyGroup"] = { fg = c.blue, bg = "none" },
+		["WhichKeyDesc"] = { fg = c.light_blue, bg = "none" },
+		["WhichKeyNormal"] = { bg = c.bg },
 	}
 end
 

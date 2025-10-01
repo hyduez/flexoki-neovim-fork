@@ -1,12 +1,7 @@
 # flexoki-neovim
-Neovim adaptation of [Flexoki](https://stephango.com/flexoki) by Steph Ango
+Neovim adaptation of [Flexoki](https://stephango.com/flexoki) by Steph Ango forked by me, [hyduez](https://codeberg.org/paulo)
 
-Currently still **work in progress** and missing support for even the most
-common plugins. This will be fixed shortly. If you are using a plugin that
-isn't supported please create an issue, or upvote an existing one, we will use
-this to prioritize them.
-
-> These aren't currently up to date
+I use it for my daily journal
 
 ![Flexoki Dark for Neovim](screenshots/flexoki-neovim-dark.png)
 
@@ -20,7 +15,7 @@ To install simply add via your plugin manager and call the theme
 
 ```lua
 require("lazy").setup({
-  { 'kepano/flexoki-neovim', name = 'flexoki' }
+  { 'hyduez/flexoki-neovim-fork', name = 'flexoki' }
 })
 ```
 
@@ -28,7 +23,7 @@ require("lazy").setup({
 
 ```lua
 require('packer').startup(function(use)
-  use({ 'kepano/flexoki-neovim', as = 'flexoki' })
+  use({ 'hyduez/flexoki-neovim-fork', as = 'flexoki' })
 end)
 ```
 
@@ -36,7 +31,7 @@ end)
 
 ```lua
 require('paq')({
-  { 'kepano/flexoki-neovim', as = 'flexoki' }
+  { 'hyduez/flexoki-neovim-fork', as = 'flexoki' }
 })
 ```
 
