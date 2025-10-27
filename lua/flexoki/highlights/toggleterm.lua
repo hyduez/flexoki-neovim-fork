@@ -7,9 +7,11 @@ M.groups = function()
 
 	--- @type table<string, vim.api.keyset.highlight>
 	return {
-		["SnacksPicker"] = { bg = c["bg"], fg = c["text"] },
-		["SnacksPickerTree"] = { bg = c["bg"] },
-		["SnacksPickerBorder"] = { bg = c["bg"] },
+		["Normal"] = { bg = c["bg"] },
+
+		["NormalFloat"] = { bg = c["bg"] },
+
+		["FloatBorder"] = { fg = c["fg"], bg = c["bg"] },
 	}
 end
 

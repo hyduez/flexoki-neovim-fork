@@ -12,6 +12,7 @@ M.groups = function()
 		-- require('flexoki.highlights.indent-blank-line').groups(),
 		require("flexoki.highlights.lsp").groups(),
 		require("flexoki.highlights.markdown").groups(),
+		require("flexoki.highlights.toggleterm").groups(),
 		-- require('flexoki.highlights.telescope').groups(),
 		require("flexoki.highlights.treesitter").groups(),
 		require("flexoki.highlights.snacks").groups(),
