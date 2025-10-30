@@ -8,7 +8,7 @@ local function rgb(color)
 	color = vim.api.nvim_get_color_by_name(color)
 
 	if color == -1 then
-		color = vim.opt.background:get() == 'dark' and 000 or 255255255
+		color = vim.opt.background:get() == "dark" and 000 or 255255255
 	end
 
 	return { byte(color, 16), byte(color, 8), byte(color, 0) }
@@ -18,7 +18,7 @@ end
 ---@param color any
 ---@return nil
 local function get_color(color)
-	return require('flexoki.palette').palette()[color]
+	return require("flexoki.palette").palette()[color]
 end
 
 ---@param fg string foreground color
@@ -33,32 +33,23 @@ M.blend = function(fg, bg, alpha)
 		return math.floor(math.min(math.max(0, ret), 255) + 0.5)
 	end
 
-	return string.format(
-		'#%02X%02X%02X',
-		blend_channel(1),
-		blend_channel(2),
-		blend_channel(3)
-	)
+	return string.format("#%02X%02X%02X", blend_channel(1), blend_channel(2), blend_channel(3))
 end
 
 ---@param group string
 ---@param color table<string, any>
 M.highlight = function(group, color)
-	local fg = color.fg and color.fg or 'none'
-	local bg = color.bg and color.bg or 'none'
-	local sp = color.sp and color.sp or ''
+	local fg = color.fg and color.fg or "none"
+	local bg = color.bg and color.bg or "none"
+	local sp = color.sp and color.sp or ""
 
-	if
-		color.blend ~= nil
-		and (color.blend >= 0 or color.blend <= 100)
-		and bg ~= nil
-	then
-		bg = M.blend(bg, get_color('bg') or '', color.blend / 100)
+	if color.blend ~= nil and (color.blend >= 0 or color.blend <= 100) and bg ~= nil then
+		bg = M.blend(bg, get_color("bg") or "", color.blend / 100)
 	end
 
 	color.blend = nil
 
-	color = vim.tbl_extend('force', color, { fg = fg, bg = bg, sp = sp })
+	color = vim.tbl_extend("force", color, { fg = fg, bg = bg, sp = sp })
 	vim.api.nvim_set_hl(0, group, color)
 end
 

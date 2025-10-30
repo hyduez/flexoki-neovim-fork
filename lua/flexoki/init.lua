@@ -1,4 +1,4 @@
-local config = require('flexoki.config')
+local config = require("flexoki.config")
 
 local M = {}
 
@@ -10,17 +10,17 @@ M.colorscheme = function(opts)
 	vim.o.termguicolors = true
 
 	if vim.g.colors_name then
-		vim.cmd.hi('clear')
+		vim.cmd.hi("clear")
 	end
 
-	vim.g.colors_name = 'flexoki'
+	vim.g.colors_name = "flexoki"
 
-	require('flexoki.theme').set_highlights(config.options)
+	require("flexoki.theme").set_highlights(config.options)
 end
 
 ---Set up the Flexoki colorscheme
 ---@param opts FlexokiOptions
-M.setup = function (opts)
+M.setup = function(opts)
 	config.extend(opts)
 end
 
