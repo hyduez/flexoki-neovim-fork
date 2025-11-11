@@ -125,7 +125,7 @@ M.groups = function()
 		["FoldColumn"] = { fg = c["ui-2"], bg = c["alt_bg"] },
 		["LineNr"] = { fg = c["tx-3"], bg = "NONE" },
 		["Whitespace"] = { fg = c["tx-3"], bg = "NONE" },
-		["WinSeparator"] = { fg = c["ui-2"], bg = c["bg"] },
+		["WinSeparator"] = { fg = c["bg-2"], bg = "NONE" },
 		["WinSeparatorNC"] = { fg = c["ui-3"], bg = c["ui-3"] },
 		["WarningMsg"] = { fg = c["re"], bg = c["bg"] },
 		["QuickFixLine"] = { fg = "NONE", bg = c["ui2_blue"] },

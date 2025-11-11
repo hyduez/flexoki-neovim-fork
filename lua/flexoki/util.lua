@@ -1,3 +1,5 @@
+local config = require("flexoki.config")
+
 local M = {}
 
 local function byte(value, offset)
@@ -40,7 +42,7 @@ end
 ---@param color table<string, any>
 M.highlight = function(group, color)
 	local fg = color.fg and color.fg or "none"
-	local bg = color.bg and color.bg or "none"
+	local bg = config.options.transparent and "none" or color.bg
 	local sp = color.sp and color.sp or ""
 
 	if color.blend ~= nil and (color.blend >= 0 or color.blend <= 100) and bg ~= nil then

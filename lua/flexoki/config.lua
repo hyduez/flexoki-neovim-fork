@@ -30,6 +30,9 @@ M.options = {
 
 	---@type table<string, vim.api.keyset.highlight>?
 	highlight_groups = {},
+
+	---@type boolean?
+	transparent = false,
 }
 
 ---@param options FlexokiOptions|nil
