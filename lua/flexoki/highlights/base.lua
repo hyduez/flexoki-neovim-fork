@@ -150,7 +150,7 @@ M.groups = function()
 		-- Cursor and selection related
 		["Cursor"] = { fg = c["bg"], bg = c["tx"] },
 		["lCursor"] = { fg = c["bg"], bg = c["tx"] },
-		["CursorLine"] = { fg = "NONE", bg = c["ui"], blend = 65 },
+		["CursorLine"] = { fg = "NONE", bg = config.options.transparent and c["bg"] or c["ui"], blend = 28 },
 		["CursorLineNr"] = { fg = c["tx"], bg = "NONE", bold = true },
 		["CursorColumn"] = { fg = "NONE", bg = c["bg-2"] },
 		["ColorColumn"] = { fg = "NONE", bg = c["ui"] },
